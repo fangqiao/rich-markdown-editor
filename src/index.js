@@ -309,7 +309,7 @@ const StyledEditor = styled(Editor)`
   font-family: ${props => props.theme.fontFamily};
   font-weight: ${props => props.theme.fontWeight};
   font-size: 1em;
-  line-height: 1.7em;
+  line-height: 1.5em;
   width: 100%;
   color: ${props => props.theme.text};
 
@@ -319,8 +319,20 @@ const StyledEditor = styled(Editor)`
   h4,
   h5,
   h6 {
-    font-weight: 500;
+    font-weight: bold;
   }
+
+  h1 {
+font-size: 1.8em;
+}
+
+h2 {
+font-size: 1.4em;
+}
+
+div {
+margin-bottom: 0.7em;
+}
 
   ul,
   ol {
@@ -335,7 +347,7 @@ const StyledEditor = styled(Editor)`
 
   p {
     position: relative;
-    margin: 0;
+    margin-bottom: 0.7em;
   }
 
   a {

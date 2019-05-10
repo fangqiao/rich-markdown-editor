@@ -42,20 +42,7 @@ export default function CodeBlock({
     <Container {...attributes} spellCheck={false}>
       {readOnly && <CopyButton text={getCopyText(node)} />}
       <Code>{children}</Code>
-      {!readOnly && (
-        <Language
-          onChange={onSelectLanguage}
-          value={language}
-          contentEditable={false}
-        >
-          {map(languages, (name, value) => (
-            <option key={value} value={value}>
-              {name}
-            </option>
-          ))}
-        </Language>
-      )}
-    </Container>
+      </Container>
   );
 }
 
@@ -68,7 +55,6 @@ const Code = styled.code`
   overflow-x: auto;
   padding: 0.5em 1em;
   line-height: 1.4em;
-
   pre {
     -webkit-font-smoothing: initial;
     font-family: ${props => props.theme.fontFamilyMono}
@@ -87,6 +73,7 @@ const Code = styled.code`
     hyphens: none;
     color: ${props => props.theme.code};
     margin: 0;
+    padding: 0 !important;
   }
 
   .token.comment,
