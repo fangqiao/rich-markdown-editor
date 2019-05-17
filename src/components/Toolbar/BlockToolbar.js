@@ -214,7 +214,7 @@ const Bar = styled.div`
     content: "";
     position: absolute;
     left: -100%;
-    width: 100%;
+    width: 0;
     height: 44px;
     background: ${props => props.theme.blockToolbarBackground};
   }
